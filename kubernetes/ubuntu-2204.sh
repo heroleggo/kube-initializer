@@ -8,7 +8,7 @@ sudo sed -i '/ swap / s/^\(.*\)$/#\1/g' /etc/fstab
 
 # load kernel modules
 
-sudo tee /etc/module-load.d/containerd.conf <<EOF
+sudo tee /etc/modules-load.d/containerd.conf <<EOF
 overlay
 br_netfilter
 EOF
