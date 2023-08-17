@@ -63,3 +63,6 @@ sudo chown $(id -u):$(id -g) $HOME/.kube/config
 
 # check master node is running
 kubectl cluster-info
+
+# install CNI plugin
+kubectl apply -f https://raw.githubusercontent.com/projectcalico/calico/v3.25.0/manifests/calico.yaml
