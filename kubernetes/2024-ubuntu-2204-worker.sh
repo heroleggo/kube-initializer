@@ -1,0 +1,1 @@
+kubeadm join <IP>:<PORT> --token <TOKEN> --discovery-token-ca-cert-hash <HASH>
