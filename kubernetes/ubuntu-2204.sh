@@ -8,7 +8,7 @@ sudo sed -i '/ swap / s/^\(.*\)$/#\1/g' /etc/fstab
 
 # load kernel modules
 
-sudo tee /etc/module-load.d/containerd.conf <<EOF
+sudo tee /etc/modules-load.d/containerd.conf <<EOF
 overlay
 br_netfilter
 EOF
@@ -63,3 +63,6 @@ sudo chown $(id -u):$(id -g) $HOME/.kube/config
 
 # check master node is running
 kubectl cluster-info
+
+# install CNI plugin
+kubectl apply -f https://raw.githubusercontent.com/projectcalico/calico/v3.25.0/manifests/calico.yaml
